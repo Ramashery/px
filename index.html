@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NOVA STUDIO — On-Demand Creative Department</title>
+<meta name="description" content="Подписка на дизайн-отдел без штата. Бренд, интерфейсы и продуктовая графика по фиксированной цене.">
+<meta name="theme-color" content="#141414">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ambient fixed layers (matches .wrapper:after / .scanlines / .vignette / .gloom from the source) -->
+<div class="gloom" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- gooey custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__inner"></div>
+  <svg width="0" height="0">
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="3.2"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -7" result="goo"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<div class="wrapper" id="wrapper">
+
+  <!-- ============ HEADER ============ -->
+  <header id="siteHeader">
+    <div class="layout cursor_disabled">
+      <div class="layout__third">
+        <a href="#top" class="logo" aria-label="NOVA STUDIO — на главную">
+          <span class="line"><span class="line__inner">
+            <svg viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text x="0" y="30" font-family="SemiSqueezed, sans-serif" font-size="34" fill="var(--primarycolor)">NOVA•STUDIO</text>
+            </svg>
+          </span></span>
+        </a>
+      </div>
+      <div class="nav layout__second">
+        <a href="#work" class="hover_effect"><span>Работы</span></a>
+        <a href="#advantages" class="hover_effect"><span>Почему мы</span></a>
+        <a href="#pricing" class="hover_effect"><span>Тарифы</span></a>
+        <a href="#faq" class="hover_effect"><span>Вопросы</span></a>
+        <a href="#contact" class="start hover_effect"><span>Начать</span></a>
+        <span class="rec">●</span>
+      </div>
+    </div>
+    <button class="menu" type="button" aria-controls="mobile-navigation" aria-expanded="false">Menu</button>
+  </header>
+
+  <div class="mobilenav__backdrop"></div>
+  <div id="mobile-navigation" class="mobilenav">
+    <div class="mobilenav__main">
+      <a href="#work" data-splitting="lines">Работы</a>
+      <a href="#advantages" data-splitting="lines">Почему мы</a>
+      <a href="#pricing" data-splitting="lines">Тарифы</a>
+      <a href="#faq" data-splitting="lines">Вопросы</a>
+      <a href="#contact" class="start" data-splitting="lines">Начать</a>
+    </div>
+    <div class="mobilenav__social">
+      <span class="monospace">hello@novastudio.design</span>
+    </div>
+  </div>
+
+  <main class="main">
+
+    <!-- ============ HERO ============ -->
+    <div class="homeHeroIntro">
+      <div class="marqueeText" effect__fadeOut effect__titleRandom effect__separatorIn>
+        <div class="marqueeText__track" id="heroMarquee">
+          <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">Дизайн‑департамент без штата</span></h1>
+          <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">Дизайн‑департамент без штата</span></h1>
+          <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">Дизайн‑департамент без штата</span></h1>
+          <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">Дизайн‑департамент без штата</span></h1>
+        </div>
+      </div>
+
+      <div class="homeMiniVideo cursor_disabled">
+        <div class="mini-video__wrapper">
+          <div class="mini-video__placeholder" aria-hidden="true"></div>
+        </div>
+        <div class="homeMiniVideo__text monospace">
+          <span data-splitting="lines">Листайте — департамент ждёт</span>
+        </div>
+      </div>
+
+      <section class="section no__p">
+        <div class="banner__hero">
+          <div class="banner__hero--wrapper" effect__fadeOutVideo>
+            <div class="home-canvas-bg" aria-hidden="true"></div>
+          </div>
+          <p class="monospace"><span data-splitting="lines">v.02 — Департамент открыт — №001 //
+            <br> Работаем как выделенный креативный отдел: структурно, предсказуемо и продуктивно с первого дня. Фиксированная ставка в месяц, постоянная команда, темп, который задаёте </span><span class="speed cursor_disabled" data-splitting="lines">вы.</span></p>
+          <div class="overlay overlay__lightgrey" effect__overlayIn></div>
+        </div>
+      </section>
+
+      <section class="section section__lightgrey no__pt">
+        <div class="topOverlay topOverlay__section"></div>
+        <div class="intro" id="intro">
+          <div class="marqueeText" effect__fadeOut effect__titleRandom effect__separatorIn>
+            <div class="marqueeText__track">
+              <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">NOVA STUDIO</span></h1>
+              <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">NOVA STUDIO</span></h1>
+              <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">NOVA STUDIO</span></h1>
+              <h1 class="marqueeText__title lead"><span class="marqueeText__symbol" data-splitting="lines">●</span><span class="marqueeText__name" data-splitting="lines">NOVA STUDIO</span></h1>
+            </div>
+          </div>
+          <div class="layout">
+            <div class="layout__third monospace">
+              <span data-splitting effect__titleRandom data-small="true">№ 001 / Интро</span>
+            </div>
+            <div class="layout__second" effect__textFade>
+              <p class="lead lead__indent" data-splitting>Нанять дизайнера в штат — долго и дорого, фрилансер пропадает в проде, а агентство работает по своему графику, а не по вашему. Нам это тоже надоело.</p>
+              <p class="lead" data-splitting>Есть способ лучше.</p>
+              <p class="lead" data-splitting>NOVA STUDIO — выделенная команда дизайнеров и арт-директоров, встроенная в ваш процесс. Одна очередь задач, фиксированная цена, предсказуемый темп.</p>
+              <p class="lead" data-splitting>Мы даём тот же уровень таланта, что и топ-агентство, но без раздутых смет и непредсказуемости.</p>
+              <p class="lead last" data-splitting>Это как иметь собственный дизайн‑департамент — от 190&nbsp;000&nbsp;₽/мес.</p>
+              <div class="buttons">
+                <a href="#pricing" class="button button__big hover_effect"><span>Смотреть тарифы</span> <span class="arrow">↗</span></a>
+                <a href="#contact" class="button button__big hover_effect"><span>Забронировать слот</span> <span class="arrow">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ WORKS / SHOWCASE ============ -->
+    <section class="section section__grey no__pt homeworksSection" id="work">
+      <div class="topOverlay topOverlay__section"></div>
+      <div class="homeworks">
+        <div class="layout">
+          <div class="layout__third"></div>
+          <div class="layout__second">
+            <p class="opacity__50 monospace"><span class="block" data-splitting effect__titleRandom data-small="true">Работаем в разных категориях и на разных стадиях — быстрая, надёжная креативная поддержка, которая подстраивается под задачи продукта и бренда.</span></p>
+          </div>
+        </div>
+        <div class="layout">
+          <div class="layout__third monospace opacity__50">
+            <span data-splitting effect__titleRandom data-small="true">№ 002 / Работы</span>
+          </div>
+          <div class="layout__second" effect__textFade>
+            <p class="lead lead__indent last" data-splitting>NOVA STUDIO закрывает всё, что нужно быстрой команде — бренд, веб и интерфейсы, performance-креатив и многое другое. Без фрилансеров, без переплаты агентствам — только выделенная команда высокого уровня.</p>
+          </div>
+        </div>
+        <div class="homeworks__showcaseHold">
+          <div class="homeworks__showcase cursor_disabled">
+            <div class="homeworks__showcaseScale">
+              <div class="homeworks__showcaseLoop">
+                <figure class="homeworks__showcaseItem homeworks__showcaseItem--a"><span>Brand / 01</span></figure>
+                <figure class="homeworks__showcaseItem homeworks__showcaseItem--b"><span>Web / 02</span></figure>
+                <figure class="homeworks__showcaseItem homeworks__showcaseItem--c"><span>Product / 03</span></figure>
+                <figure class="homeworks__showcaseItem homeworks__showcaseItem--d"><span>Motion / 04</span></figure>
+                <figure class="homeworks__showcaseItem homeworks__showcaseItem--e"><span>Social / 05</span></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADVANTAGES (scroll-stacked, mirrors ScrollAccordion/benefits) ============ -->
+    <section class="section section__blue no__pt" id="advantages">
+      <div class="topOverlay topOverlay__section"></div>
+      <div class="benefits" id="benefitsTarget">
+        <div class="benefits__title layout">
+          <div class="layout__third monospace">
+            <span class="block" data-splitting effect__titleRandom>№ 003 / Преимущества</span>
+          </div>
+          <div class="layout__second">
+            <h4 data-splitting effect__titleRandom>Почему клиенты остаются</h4>
+          </div>
+        </div>
+        <div class="benefits__items">
+          <div class="benefits__items--item">
+            <div class="layout">
+              <div class="layout__third monospace">№001</div>
+              <div class="layout__second">
+                <div class="benefits__items--text">
+                  <p class="lead last">Один тариф — все задачи</p>
+                  <p class="monospace monospace__p">Бренд, UI, презентации, соцсети — в одной очереди, без доп. смет и допродаж.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="benefits__items--item">
+            <div class="layout">
+              <div class="layout__third monospace">№002</div>
+              <div class="layout__second">
+                <div class="benefits__items--text">
+                  <p class="lead last">Средний ответ — 4 часа</p>
+                  <p class="monospace monospace__p">Асинхронный трекер задач вместо созвонов — команда работает, пока вы спите.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="benefits__items--item">
+            <div class="layout">
+              <div class="layout__third monospace">№003</div>
+              <div class="layout__second">
+                <div class="benefits__items--text">
+                  <p class="lead last">Пауза в любой момент</p>
+                  <p class="monospace monospace__p">Никаких контрактов на год. Замораживаете подписку, когда задач стало меньше.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="benefits__items--item">
+            <div class="layout">
+              <div class="layout__third monospace">№004</div>
+              <div class="layout__second">
+                <div class="benefits__items--text">
+                  <p class="lead last">Постоянная пара людей</p>
+                  <p class="monospace monospace__p">Вы работаете с одними и теми же дизайнером и арт-директором — они знают продукт наизусть.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section__pricing" id="pricing">
+      <div class="topOverlay topOverlay__section"></div>
+      <div class="pricing">
+        <div class="layout">
+          <div class="layout__third monospace">
+            <span data-splitting effect__titleRandom data-small="true">№ 004 / Тарифы</span>
+          </div>
+          <div class="layout__second" effect__textFade>
+            <p class="lead lead__indent" data-splitting>Фиксированная цена в месяц. Меняете тариф или ставите на паузу в любое время — без штрафов и допсоглашений.</p>
+          </div>
+        </div>
+
+        <div class="pricing__content layout">
+          <div class="pricing__box">
+            <div class="pricing__box--header">
+              <div class="pricing__box--name"><span class="h3">Старт</span><span class="pricing__box--badge monospace">1 очередь</span></div>
+              <div class="pricing__box--price h3">190 000 ₽<small>/мес</small></div>
+            </div>
+            <p>Для команд, которым нужен постоянный поток лёгких задач: соцсети, презентации, баннеры.</p>
+            <ul class="pricing__box--items">
+              <li>Одна задача в работе одновременно</li>
+              <li>Средний срок — 48 часов</li>
+              <li>Безлимит правок</li>
+              <li>Пауза в любой момент</li>
+            </ul>
+            <a href="#contact" class="button hover_effect"><span>Выбрать «Старт»</span> <span class="arrow">↗</span></a>
+          </div>
+
+          <div class="pricing__box spotlight">
+            <div class="pricing__box--header">
+              <div class="pricing__box--name"><span class="h3">Департамент</span><span class="pricing__box--badge monospace">популярный</span></div>
+              <div class="pricing__box--price h3">340 000 ₽<small>/мес</small></div>
+            </div>
+            <p>Полноценная замена дизайн-отдела: бренд, интерфейсы, лендинги, motion.</p>
+            <ul class="pricing__box--items">
+              <li>Две задачи параллельно</li>
+              <li>Средний срок — 24 часа</li>
+              <li>Личный арт-директор</li>
+              <li>Приоритет в очереди</li>
+            </ul>
+            <a href="#contact" class="button hover_effect"><span>Выбрать «Департамент»</span> <span class="arrow">↗</span></a>
+          </div>
+
+          <div class="pricing__box">
+            <div class="pricing__box--header">
+              <div class="pricing__box--name"><span class="h3">Scale</span><span class="pricing__box--badge monospace">по запросу</span></div>
+              <div class="pricing__box--price h3">от 520 000 ₽<small>/мес</small></div>
+            </div>
+            <p>Для продуктовых команд с несколькими направлениями и своим брендбуком.</p>
+            <ul class="pricing__box--items">
+              <li>3+ задачи параллельно</li>
+              <li>Выделенная команда из 3 человек</li>
+              <li>Еженедельные синки</li>
+              <li>SLA и приоритетная поддержка</li>
+            </ul>
+            <a href="#contact" class="button hover_effect"><span>Обсудить Scale</span> <span class="arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ / ACCORDION ============ -->
+    <section class="section" id="faq">
+      <div class="layout">
+        <div class="layout__third monospace">
+          <span data-splitting effect__titleRandom data-small="true">№ 005 / Вопросы</span>
+        </div>
+        <div class="layout__second" effect__textFade>
+          <h2 class="h2" data-splitting>Прежде чем спросить в чате</h2>
+        </div>
+      </div>
+
+      <ul class="accordion" id="accordion">
+        <li>
+          <a data-index="0">
+            <span class="layout__third monospace">01</span>
+            <span class="h5">Как быстро мы начнём работать?</span>
+            <span class="more">+</span>
+          </a>
+          <div class="accordion__content">
+            <p>После оплаты первого месяца мы знакомимся 20 минут, собираем контекст и заводим первую задачу в течение рабочего дня. Отдельный онбординг не нужен.</p>
+          </div>
+        </li>
+        <li>
+          <a data-index="1">
+            <span class="layout__third monospace">02</span>
+            <span class="h5">Что если задач станет слишком много?</span>
+            <span class="more">+</span>
+          </a>
+          <div class="accordion__content">
+            <p>Каждый тариф ограничивает не число задач, а число параллельных потоков. Задачи копятся в приоритетной очереди — вы всегда видите, что сейчас в работе.</p>
+          </div>
+        </li>
+        <li>
+          <a data-index="2">
+            <span class="layout__third monospace">03</span>
+            <span class="h5">Можно ли поставить подписку на паузу?</span>
+            <span class="more">+</span>
+          </a>
+          <div class="accordion__content">
+            <p>Да, в любой момент из личного кабинета. Слот сохраняется за вами на 30 дней — вернётесь к той же команде и контексту.</p>
+          </div>
+        </li>
+        <li>
+          <a data-index="3">
+            <span class="layout__third monospace">04</span>
+            <span class="h5">Кто владеет правами на макеты?</span>
+            <span class="more">+</span>
+          </a>
+          <div class="accordion__content">
+            <p>Все права на готовые материалы переходят вам сразу после сдачи задачи — исходники, шрифты и лицензии на графику включены в подписку.</p>
+          </div>
+        </li>
+        <li>
+          <a data-index="4">
+            <span class="layout__third monospace">05</span>
+            <span class="h5">А если результат не подойдёт?</span>
+            <span class="more">+</span>
+          </a>
+          <div class="accordion__content">
+            <p>Правки безлимитны и включены в тариф. Если направление в целом не подошло — пересобираем задачу с нуля без дополнительной оплаты.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section class="section section__red" id="contact">
+      <div class="layout">
+        <div class="layout__third monospace">
+          <span data-splitting effect__titleRandom data-small="true">№ 006 / Контакт</span>
+        </div>
+        <div class="layout__second" effect__textFade>
+          <h2 class="h2" data-splitting>Готовы забронировать дизайн‑слот?</h2>
+          <div class="buttons">
+            <a href="mailto:hello@novastudio.design" class="button button__big hover_effect"><span>hello@novastudio.design</span> <span class="arrow">↗</span></a>
+            <a href="#pricing" class="button button__big hover_effect"><span>Вернуться к тарифам</span> <span class="arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (logo trail via GSAP ScrollTrigger scrub) ============ -->
+  <section class="section no__p footer section__grey">
+    <div class="footer__wrapper" effect__parallax data-parallax="20">
+      <div class="footer__logoStack" id="footerLogoStack">
+        <svg id="footerLogoFront" class="footer__logo footer__logo--front" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="46" font-family="SemiSqueezed, sans-serif" font-size="52" fill="currentColor">NOVA STUDIO</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="layout no__pt">
+      <div class="layout__third monospace">
+        <div class="address">
+          NOVA STUDIO LLC<br>
+          000000000000<br>
+          UL. PRIMERNAYA 12<br>
+          MOSCOW<br>
+          RUSSIA<br><br>
+          GMT +03:00
+        </div>
+      </div>
+      <div class="layout__second">
+        <div class="buttons">
+          <a href="#" class="button button__half hover_effect" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="arrow">↗</span></a>
+          <a href="#" class="button button__half hover_effect" target="_blank" rel="noopener noreferrer"><span>Telegram</span><span class="arrow">↗</span></a>
+          <a href="#" class="button button__half hover_effect" target="_blank" rel="noopener noreferrer"><span>Behance</span><span class="arrow">↗</span></a>
+          <a href="mailto:hello@novastudio.design" class="button button__half hover_effect"><span>Написать нам</span><span class="arrow">↗</span></a>
+          <a href="#" class="button button__half hover_effect"><span>Условия использования</span><span class="arrow">↗</span></a>
+          <a href="#" class="button button__half hover_effect"><span>Политика конфиденциальности</span><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
